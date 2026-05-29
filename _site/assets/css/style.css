@@ -1,5 +1,23 @@
+/* Background pattern */
+html {
+  --s: 37px; /* control the size*/
+  --c1: #bad8d3;
+  --c2: #a2cbdd;
+  
+  --c:#0000,var(--c1) .5deg 119.5deg,#0000 120deg;
+  --g1:conic-gradient(from  60deg at 56.25% calc(425%/6),var(--c));
+  --g2:conic-gradient(from 180deg at 43.75% calc(425%/6),var(--c));
+  --g3:conic-gradient(from -60deg at 50%   calc(175%/12),var(--c));
+  background:
+    var(--g1),var(--g1) var(--s) calc(1.73*var(--s)),
+    var(--g2),var(--g2) var(--s) calc(1.73*var(--s)),
+    var(--g3) var(--s) 0,var(--g3) 0 calc(1.73*var(--s)) 
+    var(--c2);
+  background-size: calc(2*var(--s)) calc(3.46*var(--s));
+}
+
 body{
-    background: #DDE7ED;
+    /* background: #DDE7ED; */
     font-family: sans-serif;
     padding:0px;
     margin:0px;
@@ -52,11 +70,11 @@ nav ul li a {
     color:#052332;
 }
 
-h3{ 
+/* h3{ 
     background:#3678BD;
     color:#D8DF4F;
     padding:10px;
-}
+} */
 nav ul li a:hover { 
     background:#052332;
     color:#D8DF4F;
@@ -72,9 +90,6 @@ nav ul li a:hover {
     margin:0px;
     padding:0px;
     width: 100%;
-}
-button {
-
 }
 
 #about p{
@@ -119,19 +134,25 @@ a:hover{
 .content .content-block img{
     display:block;
     float:left;
-    width:30%;
+    width:33%;
     height:auto;
     /* height: 28%; */
     padding:2%;
 }
 .content .content-block h2{ 
-    border-left: 5px solid #3678BD;
-    padding: 0px 20px;
+    /* border-left: 5px solid #3678BD; */
+    /* padding: 0px 20px; */
     font-size:300%;
+    margin: 0px;
 }
-.content .content-block #involved p{
+#title_img {
+    height: 75px;
+    width: auto;
+    display: block;
+}
+/* .content .content-block #involved p{
     width:100%;
-}
+} */
 .site-header{
     background:#51A8DD;
     /*background-image: url(../images/header.jpg);*/
@@ -170,8 +191,8 @@ a:hover{
     padding: 18px;
   }
 #divider{
-    background-image: url('../images/divide.jpg');
-    min-height: 500px;
+    /* background-image: url('../images/divide.jpg'); */
+    /* min-height: 500px; */
     width: 100%;
     position: absolute;
     overflow: visible;
@@ -203,11 +224,95 @@ a:hover{
     color:#3678BD;
     float:left;
 }
-.table_component {
-    overflow: auto;
+
+/* NEW table styling */
+table{
+    width: 100%;
+    border-collapse: collapse;
+    background: #a2cbdb;
+    /* padding: 1rem; */
+}
+
+caption, th, td{
+    padding: 1rem;
+}
+
+th {
+    text-align: left;
+    background: #d7df21;
+    width: 200px;
+}
+
+caption {
+    color: #d7df21;
+    font-weight: 700;
+    font-size: 1.5rem;
+    background: #3678BD;
+    /* background: #55c0ac; */
+}
+
+tr:nth-of-type(2n) {
+    background: #82c1d9;
+    /* background: #67bfaf; */
+}
+
+.two_columns {
+    display: flex;
+}
+
+.two_columns img {
+    width: 400px;
+    height: auto;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* Priyanka's banner image */
+.banner_img img{
+    display: block;
+    margin: auto;
     width: 100%;
 }
 
+.workshops {
+    display: flex;
+    gap: 20 px;
+    padding: 20px;
+}
+
+.workshops img{
+    width: 50%;
+    height: auto;
+    /* padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+    padding-right: 5px; */
+    /* margin-right: 20px;
+    margin-left: 20px; */
+}
+
+.attend p { 
+    font-size: 14pt;
+    display:block;
+    line-height: 1.5;
+}
+
+.attend h3 {
+    font-size:200%;
+    /* margin: 0px; */
+}
+
+.attend address{
+    font-size: 14pt;
+    margin: 20px;
+}
+
+
+/* all the original table styling */
+/* .table_component {
+    overflow: auto;
+    width: 100%;
+}
 .table_component table {
     border: 1px solid #dededf;
     height: 100%;
@@ -217,12 +322,10 @@ a:hover{
     border-spacing: 1px;
     text-align: left;
 }
-
 .table_component caption {
     caption-side: top;
     text-align: left;
 }
-
 .table_component th {
     background-color: #72BEAD;
     color: white;
@@ -235,13 +338,14 @@ a:hover{
     background-color: none;
     color:#3678BD;
 }
-
 .table_component td {
     border: 1px solid #dededf;
     background-color: #ffffff;
     color: #000000;
     padding: 5px;
-}
+} */
+
+
 #footer #NSF{
     float:left;
     width: 350px;
